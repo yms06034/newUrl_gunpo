@@ -1,0 +1,101 @@
+header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    .logo {
+      width: 130px;
+      height: 80px;
+    }
+    .nav {
+      min-width: 750px;
+      display: flex;
+      justify-content: space-evenly;
+      font-weight: bold;
+      font-size: 18px;
+      .m1 {
+        &:hover {
+          color: $primary;
+          display: block;
+        } 
+      }
+    }
+  }
+
+
+  .footer_area {
+    background-color: #222222;
+    padding: 60px 0;
+    text-align: left;
+    .content_area {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      .cont_1 {
+        display: flex;
+        color: #EEECE1;
+        font-size: 14px;
+        .text_area {
+          margin-left: 50px;
+          p {
+            margin-bottom: 5px !important;
+          }
+          .pri_color {
+            color: $primary3;
+            margin-top: 20px;
+            strong {
+              font-size: 15px;
+            }
+          }
+          .gray_area {
+            margin-top: 15px;
+            .gray {
+              color: #696969;
+            }
+          }
+        }
+      }
+  
+      .cont_2 {
+        margin-top: 30px;
+        display: flex;
+        color: #EEECE1;
+        font-size: 14px;
+        .text_area {
+          margin-left: 50px;
+          p {
+            margin-bottom: 5px !important;
+          }
+          .pri_color {
+            color: $primary3;
+            margin-top: 20px;
+            strong {
+              font-size: 15px;
+            }
+          }
+          .gray_area {
+            margin-top: 15px;
+            .gray {
+              color: #696969;
+            }
+          }
+          .white {
+            margin-top: 15px;
+            margin-bottom: 15px !important;
+          }
+          .personalInformationProcessing {
+            color: $primary3;
+            &:hover {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  

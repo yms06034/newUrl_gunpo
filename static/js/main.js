@@ -1,55 +1,9 @@
-history.scrollRestoration = "auto";
+const img_1 = document.getElementById("img_1");
+const img_2 = document.getElementById("img_2");
+const img_3 = document.getElementById("img_3");
+const img_4 = document.getElementById("img_4");
 
-const modal = document.querySelector("#popup");
-const openBtn = document.querySelector("#openBtn");
-const closeButton = document.querySelector("#closeBtn");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-openBtn.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
-
-const modals = document.getElementsByClassName("por_modal");
-const btns = document.getElementsByClassName("a_bbtn");
-const spanes = document.getElementsByClassName("close");
-let funcs = [];
-
-console.log(modals);
-console.log(btns);
-console.log(spanes);
-
-function Modal(num) {
-  return function() {
-    btns[num].onclick = ()=>{
-      modals[num].style.display = "block";
-      console.log(num);
-    };
-
-    spanes[num].onclick = ()=>{
-      modals[num].style.display = "none";
-    };
-  };
-}
-
-for(let i = 0; i < btns.length; i++) {
-  funcs[i] = Modal(i);
-}
-
-for(let j = 0; j < btns.length; j++) {
-  funcs[j]();
-}
-
-window.onclick = function(event) {
-  if (event.target.className == "por_modal") {
-    event.target.style.display = "none";
-  }
-};
+console.log(img_1);
+console.log(img_2);
+console.log(img_3);
+console.log(img_4);
