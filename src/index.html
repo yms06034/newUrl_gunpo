@@ -8,8 +8,9 @@
   <title>군포트윈비스타</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../static/css/reset.css">
-  <link rel="stylesheet" href="../static/css/main.scss">
+  <link rel="stylesheet" href="../static/css/reset.css" />
+  <link rel="stylesheet" href="../static/css/main.scss" />
+  <link rel="stylesheet" href="../static/css/h_f.scss" />
 
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
@@ -21,56 +22,119 @@
 </head>
 <body>
   <div id="app">
-    <header>
-      <div class="logo">
-        <a class="header_logo" href="javascripts:void(0)">
-          <img src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
-        </a>
-      </div>
+  <!-- Header -->
+  <header>
+    <div class="container d-flex align-items-center justify-content-sm-between py-3">
+      <a href="../src/index.html" class="logo">
+        <img class="logo_img" src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
+      </a>
       <ul class="nav">
-        <li class="m1">사업안내
-          <ul>
-            <li>
-              <a>사업개요</a>
-            </li>
-            <li>입지환경</li>
-            <li>프리미엄</li>
-            <li>오시는길</li>
-          </ul>
+        <li class="nav-item">
+          <a href="../src/businessGuide/bsnsOvrvw.html" class="nav-link">
+            사업안내
+          </a>
         </li>
-        <li class="m1">단지안내
-          <ul>
-            <li>단지배치도</li>
-            <li>동호수표</li>
-            <li>커뮤니티</li>
-          </ul>
+        <li class="nav-item">
+          <a href="../src/infrmCmplx/layoutComplex.html" class="nav-link">
+            단지안내
+          </a>
         </li>
-        <li class="m1">분양안내
-          <ul>
-            <li>청약팀</li>
-            <li>개약안내</li>
-            <li>인지세납부안내</li>
-          </ul>
+        <li class="nav-item">
+          <a href="../src/householdInformation/84.html" class="nav-link">
+            세대안내
+          </a>
         </li>
-        <li class="m1">홍보센터
-          <ul>
-            <li>언론보도</li>
-            <li>홍보영상</li>
-          </ul>
+        <li class="nav-item">
+          <a href="javascript:void(0)" class="nav-link">
+            분양안내
+          </a>
         </li>
-        <li class="m1">공동구매
-          <ul>
-            <li>공동구매</li>
-            <li>기계약자 안내문</li>
-          </ul>
+        <li class="nav-item">
+          <a href="javascript:void(0)" class="nav-link">
+            홍보센터
+          </a>
         </li>
       </ul>
-      <div class="tel_btn">
-        <button onclick="document.location.href='tel:02-000-0000'">
-          <img src="https://수원금호리첸시아.com/img_n/tel_img.png" alt="tel_btn">
-        </button>
+      <a class="tel_i_area" href="tel:010-0000-0000">
+        <img class="tel_i_img" src="../assets/tel_icon.png" alt="tel_icon" />
+        <p class="telnum">031&#41;<span class="sub_tel">000-0000</span></p>
+      </a>
+      <button class="btn ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <img class="menu_icon" src="../assets/icon/icon_menu_.png" alt="Menu Icon" />
+      </button>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item ">
+             <a class="href_main" href="../src/businessGuide/bsnsOvrvw.html">사업안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../src/businessGuide/bsnsOvrvw.html">사업개요</a> 
+              </li>
+              <li>
+                <a href="../src/businessGuide/lctnEnvrn.html">입지환경</a> 
+              </li>
+              <li>
+                <a href="../src/businessGuide/location.html">오시는길</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="../src/infrmCmplx/layoutComplex.html">단지안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../src/infrmCmplx/layoutComplex.html">단집배치도</a> 
+              </li>
+              <li>
+                <a href="../src/infrmCmplx/eLakTbl.html">동호수표</a> 
+              </li>
+              <li>
+                <a href="../src/infrmCmplx/community.html">커뮤니티</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="../src/householdInformation/84.html">세대안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../src/householdInformation/84.html">84</a> 
+              </li>
+              <li>
+                <a href="../src/householdInformation/59.html">59</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="#">홍보센터</a>
+             <ul class="href-sub-list">
+              <li></li>
+              <li>
+                <a href="#">언론보도</a> 
+              </li>
+              <li>
+                <a href="#">홍보영상</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="#">공동구매</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="#">공동구매</a> 
+              </li>
+              <li>
+                <a href="#">기계약자안내문</a>
+              </li>
+             </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Main banner -->
     <section>
@@ -169,7 +233,7 @@
             </div>
             <div class="text_area">
               <p>수원 금호 리첸시아 퍼스티지 | 홍보관 주소 : 수원시 권선구 고색동 533-6 | 문의&#41; 031-000-0000</p>
-              <p>COPYRIGHT © 2023. 수원 금호 리첸시아 퍼스티지. all rights reserved.</p>
+              <p>COPYRIGHT © <span class="this-year"></span>. 수원 금호 리첸시아 퍼스티지. all rights reserved.</p>
               <p class="pri_color">시행 <strong>인피니플러스(주), (주)휴이언</strong> 시공 <strong>금호건설(주)</strong> 신탁 <strong>한국자산신탁(주)</strong></p>
               <div class="gray_area">
                 <p class="gray">- 유의사항: 개인정보 취급 및 위탁받는자(수탁업체)</p>
@@ -201,24 +265,7 @@
     </div>
 
     <script src="../static/js/main.js"></script>
-
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
   </body>
 </html>

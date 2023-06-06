@@ -51,6 +51,6 @@ button{background: inherit ; border:none; box-shadow:none; border-radius:0; padd
 
 header .nav .ml:hover + header .drop-menu {display: block;}
 
-a {text-decoration: none !important;}
+a {text-decoration: none !important; color: black;}
 
 p {margin-bottom: 0 !important;}
