@@ -57,6 +57,30 @@ header {
     .nav-item {
       .nav-link {
         color: #222222;
+        position: relative;
+        display: block;
+      }
+      .sub_gnb {
+        display: none;
+        background-color: #222222;
+        opacity: 0.9;
+        padding: 20px 20px;
+        li {
+          text-align: center;
+          margin-bottom: 10px;
+          a {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+      .sung {
+        width: 100px;
+      }
+      &:hover .sub_gnb {
+        display: block;
+        position: absolute;
       }
     }
   }
