@@ -88,6 +88,8 @@ section {
   .main_banner_area {
     position: relative;
     .img_area {
+      @media(max-width:992px) {
+      }
       .img {
         height: auto;
         width: 100%;
@@ -110,9 +112,14 @@ section {
       }
       .center-text {
         position: absolute;
-        left: 34vw;
+        left: 11vw;
         top: 8vh; 
         width: 150px;
+        @media(max-width:992px) {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
         img {
           width: 100%;
         }
