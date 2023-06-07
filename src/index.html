@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="chrome">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" href="../assets/favicon.icon.png" type="image/x-icon">
+
   <title>군포트윈비스타</title>
 
   <!-- CSS -->
@@ -74,7 +76,7 @@
         <p class="telnum">031&#41;<span class="sub_tel">000-0000</span></p>
       </a>
 
-      <button class="btn ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <img class="menu_icon" src="../assets/icon/icon_menu_.png" alt="Menu Icon" />
       </button>
       <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -148,17 +150,21 @@
       <div class="first_sec">
         <div class="main_banner_area">
           <div class="img_area">
-            <img alt="Snow" class="img" src="../assets/main_mobile.png" alt="web_mainbanner">
-            <div class="left-text">
-              <!-- <p class="top">수원 금호 리첸시아 퍼스티지</p>
-              <p class="md">고색지구 첫집</p>
-              <p class="bottom">퍼펙트라이프</p>
-              <p class="item">완벽한 인프라부터 놀라운 특화설계까지</p>
-              <p class="item">고색지구를 대표할 랜드마크까지</p> -->
+            <img alt="Snow" class="img" src="../assets/1920-600.png" alt="web_mainbanner">
+            <div class="bg-right-content">
+              <img src="../assets/main-banner-right.png" alt="right-bg">
+              <img class="bg--r-main-title" src="../assets/main-tittle.png" alt="main-tittle" />
             </div>
             <div class=center-text>
-              <img src="https://xn--jj0bu4t0wgqwa91g11cq6p37s.com/img_n/main/s1_slider01_text.png" alt="img" />
+              <img src="../assets/sub-banner.png" alt="img" />
             </div>
+          </div>
+        </div>
+
+        <!-- MOBILD -->
+        <div class="main_banner_area_m">
+          <div class="img_area">
+            <img alt="Snow" class="img" src="../assets/main_mobile-long.png" alt="web_mainbanner">
           </div>
         </div>
       </div>
@@ -169,67 +175,54 @@
       <div class="top_content">
         <div class="top_title_area">
           <div class="title">
-            <p class="sub_text">SUWON KUMHO <strong>RICHENSIA PREMIUM</strong></p>
-            <p class="main_text">집에 대한 모든 바람을 담은 프리미엄 모음집.</p>
+            <p class="sub_text">GUNPO <strong>TWINVISTA</strong></p>
+            <p class="main_text">집에 대한 모든 바람을 담은 <span style="color: #CFA578">프리미엄 모음집.</span></p>
           </div>
         </div>
 
-        <div class="content_area">
-          <div id="img_area">
-            <div class="img-list">
-              <div class="img-item">
-                <img src="../assets/main_premium/edu.png" alt="edu" />
+        <div class="premium-content-area">
+          <div class="premium-slide">
+            <div class="img-items">
+              <img class="sliderimg" src="../assets/premium_img/m_s2_slider01_bg.png" alt="img" />
+              <div class="btn-area">
+                <hr />
+                <button id="bbbtn01" class="bbbtn">입지</button>
+                <hr />
+                <button id="bbbtn02" class="bbbtn">교통</button>
+                <hr />
+                <button id="bbbtn03" class="bbbtn">생활</button>
+                <hr />
+                <button id="bbbtn04" class="bbbtn">교육</button>
               </div>
-              <div class="img-item">
-                <img src="../assets/main_premium/life.png" alt="life" />
-              </div>
-              <div class="img-item">
-                <img src="../assets/main_premium/location.png" alt="location" />
-              </div>
-              <div class="img-item">
-                <img src="../assets/main_premium/traffic.png" alt="traffic" />
-              </div>
-            </div>
-          </div>
-          <a class="bbtn_premium" href="../src/businessGuide/premium.html">
-            VIEW MORE +
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="top_image">
-      <div class="top_text">
-        <p class="header_title">7 SUPER BENEFIT</p>
-      </div>
-      <div>
-        <img src="../assets/family.png" alt="family" />
-      </div>
-    </div>
-
-    <section style="padding-top: 0;">
-      <div class="snd_sec">
-        <div class="snd_content">
-          <div class="image_area">
-            <div class="text-area">
-              <div class="container_1">
-                <img src="../assets/icon/자격제한.png" alt="자격제한" />
-                <img src="../assets/icon/청약제한.png" alt="청약제한" />
-                <img src="../assets/icon/공급제한.png" alt="공급제한" />
-                <img src="../assets/icon/자금부담.png" alt="자금부담" />
-              </div>              
-              <div class="container_2">
-                <img src="../assets/icon/세금부담.png" alt="세금부담" />
-                <img src="../assets/icon/매매부담.png" alt="매매부담" />  
-                <img src="../assets/icon/전매제한.png" alt="전매제한" />
-              </div>
+              <a class="bbtn_premium" href="../src/businessGuide/premium.html">
+                VIEW MORE +
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section>
+      <div class="benefit-area">
+        <div class="benefit-list">
+          <div class="left-bg">
+            <img class="l-b-t" src="../assets/benefit_img/mian_text.png" alt="mian_text" />
+            <img class="l-b-f" src="../assets/family.png" alt="family" />
+          </div>
+          <div class="right-bg">
+            <img class="r-b-img" src="../assets/trd_tres_m.png" alt="s3_right_bg" />
+            <div class="r-sub-bg">
+              <img class="r-s-img" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="m_s03_slider_item-01" />
+            </div>
+            <div class="view-btn_area">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
       <div class="footer_area">
         <div class="content_area">
@@ -238,18 +231,18 @@
               <img src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
             </div>
             <div class="text_area">
-              <p>수원 금호 리첸시아 퍼스티지 | 홍보관 주소 : 수원시 권선구 고색동 533-6 | 문의&#41; 031-000-0000</p>
-              <p>COPYRIGHT © <span class="this-year"></span>. 수원 금호 리첸시아 퍼스티지. all rights reserved.</p>
-              <p class="pri_color">시행 <strong>인피니플러스(주), (주)휴이언</strong> 시공 <strong>금호건설(주)</strong> 신탁 <strong>한국자산신탁(주)</strong></p>
-              <div class="gray_area">
+              <p>군포역 트윈비스타 | 홍보관 주소 : 경기도 안양시 동안구 시민대로 115 | 문의&#41; 0000-0000</p>
+              <p>COPYRIGHT © <span class="this-year"></span>. 군포역 트윈비스타 all rights reserved.</p>
+              <!-- <p class="pri_color">시행 <strong>인피니플러스(주), (주)휴이언</strong> 시공 <strong>금호건설(주)</strong> 신탁 <strong>한국자산신탁(주)</strong></p> -->
+              <!-- <div class="gray_area">
                 <p class="gray">- 유의사항: 개인정보 취급 및 위탁받는자(수탁업체)</p>
                 <p class="gray">- 분양 및 업무대행 : (주)니소스씨앤디, (주)유당디엔씨</p>
                 <p class="gray">- 마케팅 업무 KP디지털마케팅(주)</p>
-              </div>
+              </div> -->
             </div>
           </div>
 
-          <div class="cont_2">
+          <!-- <div class="cont_2">
             <div class="logo">
               <img src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
             </div>
@@ -262,7 +255,7 @@
               <p class="white">관심고객 등록 및 관리는 분양마케팅사 (주)니소스씨앤디의 마케팅 플랫폼인 KPDM(주)에서 수집 및 주관합니다.</p>
               <a class="personalInformationProcessing" href="../src/term_p/personalInformationProcessing.html">| 개인정보처리방침 |</a>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -271,7 +264,33 @@
     </div>
 
     <script src="../static/js/main.js"></script>
+    
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+      });
+    </script>
+
 
   </body>
 </html>

@@ -137,6 +137,10 @@ section {
     padding-bottom: 33px;
     background: url(https://xn--jj0bu4t0wgqwa91g11cq6p37s.com/css/../image/sub_title_bg.png) no-repeat center bottom;
     line-height: 1;
+    @media(max-width:500px) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
   }
   .location {
     display: flex;
