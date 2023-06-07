@@ -1,137 +1,326 @@
-<div class="container sub">
-	<div class="row">
-		<h6><span>개인정보 처리방침</span></h6>
-		<div class="term-box" onkeydown="resize(this)" onkeyup="resize(this)">
-인피니플러스 주식회사는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다. 회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 회사는 개인정보 처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br>
-<br>
-1. 개인정보의 처리 목적<br>
-회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
-<br>
-· 분양 정보 안내 및 분양상담 등 문의처리<br>
-<br>
-· 수원 금호 리첸시아 퍼스티지 분양 정보 제공<br>
-<br>
-2. 개인정보의 처리 및 보유기간<br>
-원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
-<br>
-· 보존 항목 : 성명, 휴대폰번호, 전화번호, 이메일, 주소, 관심평형, 청약자격, 접속로그<br>
-<br>
-· 보존 근거 : 분양정보 안내 및 분양상담 등 서비스<br>
-<br>
-· 보존기간 : 6개월<br>
-<br>
-3. 개인정보의 제3자 공유 및 제공<br>
-회사는 정보주체의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.<br>
-<br>
-· 정보주체들이 사전에 공개에 동의한 경우<br>
-<br>
-· 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br>
-<br>
-· 통계작성, 학술연구나 시장조사를 위해 특정 개인을 식별할 수 없는 형태로 가공하여 제공하는 경우<br>
-<br>
-4. 개인정보 수집항목 및 수집방법<br>
-회사는 서비스 제공을 위하여 필요한 최소한의 범위 내에서 아래와 같이 개인정보를 수집하고 있습니다.<br>
-<br>
-가. 수집항목<br>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="chorme">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testheader</title>
 
-· 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br>
-<br>
-· 통계작성, 학술연구나 시장조사를 위해 특정 개인을 식별할 수 없는 형태로 가공하여 제공하는 경우<br>
-<br>
-나. 개인정보 수집방법<br>
-<br>
-· 개인정보 수집방법 : 홈페이지(관심고객 등록)<br>
-<br>
-5. 개인정보의 처리 위탁<br>
-회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 위탁계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.<br>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<table class="table-1">
-	<thead>
-		<tr>
-			<th>수탁업체</th>
-			<th>위탁업무내용</th>
-			<th>개인정보의 보유 및 이용기간</th>
-		</tr>
-		<tr>
-			<th>하이브미디어</th>
-			<th>웹사이트 운영 및 시스템 관리</th>
-			<th>제공받은 목적 달성시 혹읜 위탁계약 종료시까지</th>
-		</tr>
-		<tr>
-			<th>㈜니소스씨앤디</th>
-			<th>분양대행 / 마케팅 :
-분양정보 안내 및 분양 상담 등 문의 처리</th>
-			<th>제공받은 목적 달성시 혹은 위탁계약 종료시까지</th>
-		</tr>
-	</thead>
-</table>
+  <link rel="stylesheet" href="../../static/css/h_f.scss" />
+  <link rel="stylesheet" href="../../static/css/reset.css" />
+  <link rel="stylesheet" href="../../static/css/main.scss" />
+  <link rel="stylesheet" href="../../static/css/style.scss" />
+
+</head>
+<body>  
+
+  <!-- Header -->
+  <header>
+    <div class="container d-flex align-items-center justify-content-sm-between py-3">
+      <a href="../../src/index.html" class="logo">
+        <img class="logo_img" src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
+      </a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="../../src/businessGuide/bsnsOvrvw.html" class="nav-link">
+            사업안내
+          </a>
+          <ul class="sub_gnb">
+            <li><a href="../../src/businessGuide/bsnsOvrvw.html">사업개요</a></li>
+            <li><a href="../../src/businessGuide/lctnEnvrn.html">입지환경</a></li>
+            <li><a href="../../src/businessGuide/location.html">오시는길</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="../../src/infrmCmplx/layoutComplex.html" class="nav-link">
+            단지안내
+          </a>
+          <ul class="sub_gnb">
+            <li><a href="../../src/infrmCmplx/layoutComplex.html">단지배치도</a></li>
+            <li><a href="../../src/infrmCmplx/eLakTbl.html">동호수표</a></li>
+            <li><a href="../../src/infrmCmplx/community.html">커뮤니티</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="../../src/householdInformation/84.html" class="nav-link">
+            세대안내
+          </a>
+          <ul class="sub_gnb sung">
+            <li><a href="../../src/householdInformation/84.html">84</a></li>
+            <li><a href="../../src/householdInformation/59.html">56</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="../../src/informationCenters/mediaCoverage.html" class="nav-link">
+            홍보센터
+          </a>
+          <ul class="sub_gnb">
+            <li><a href="../../src/informationCenters/mediaCoverage.html">언론보도</a></li>
+            <li><a href="../../src/informationCenters/promotionalVideo.html">홍보영상</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="tel_i_area" href="tel:010-0000-0000">
+        <img class="tel_i_img" src="../../assets/tel_icon.png" alt="tel_icon" />
+        <p class="telnum">031&#41;<span class="sub_tel">000-0000</span></p>
+      </a>
+      <button class="btn ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <img class="menu_icon" src="../../assets/icon/icon_menu_.png" alt="Menu Icon" />
+      </button>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item ">
+             <a class="href_main" href="../businessGuide/bsnsOvrvw.html">사업안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../businessGuide/bsnsOvrvw.html">사업개요</a> 
+              </li>
+              <li>
+                <a href="../businessGuide/lctnEnvrn.html">입지환경</a> 
+              </li>
+              <li>
+                <a href="../businessGuide/location.html">오시는길</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="../infrmCmplx/layoutComplex.html">단지안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../infrmCmplx/layoutComplex.html">단집배치도</a> 
+              </li>
+              <li>
+                <a href="../infrmCmplx/eLakTbl.html">동호수표</a> 
+              </li>
+              <li>
+                <a href="../infrmCmplx/community.html">커뮤니티</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="../householdInformation/84.html">세대안내</a>
+             <ul class="href-sub-list">
+              <li>
+                <a href="../householdInformation/84.html">84</a> 
+              </li>
+              <li>
+                <a href="../householdInformation/59.html">59</a> 
+              </li>
+             </ul>
+            </li>
+            <li class="list-group-item">
+             <a class="href_main" href="../informationCenters/mediaCoverage.html">홍보센터</a>
+             <ul class="href-sub-list">
+              <li></li>
+              <li>
+                <a href="../informationCenters/mediaCoverage.html">언론보도</a> 
+              </li>
+              <li>
+                <a href="../informationCenters/promotionalVideo.html">홍보영상</a> 
+              </li>
+             </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Area -->
+  <section>
+    <div class="content-area">
+      <h6 class="top_title">개인정보처리방침</h6>
+      <div class="container-sub">
+		    <div class="row">
+          <div class="term-box" onkeydown="resize(this)" onkeyup="resize(this)">
+          인피니플러스 주식회사는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다. 회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 회사는 개인정보 처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br>
+          <br>
+          1. 개인정보의 처리 목적<br>
+          회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+          <br>
+          · 분양 정보 안내 및 분양상담 등 문의처리<br>
+          <br>
+          · 수원 금호 리첸시아 퍼스티지 분양 정보 제공<br>
+          <br>
+          2. 개인정보의 처리 및 보유기간<br>
+          원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+          <br>
+          · 보존 항목 : 성명, 휴대폰번호, 전화번호, 이메일, 주소, 관심평형, 청약자격, 접속로그<br>
+          <br>
+          · 보존 근거 : 분양정보 안내 및 분양상담 등 서비스<br>
+          <br>
+          · 보존기간 : 6개월<br>
+          <br>
+          3. 개인정보의 제3자 공유 및 제공<br>
+          회사는 정보주체의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.<br>
+          <br>
+          · 정보주체들이 사전에 공개에 동의한 경우<br>
+          <br>
+          · 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br>
+          <br>
+          · 통계작성, 학술연구나 시장조사를 위해 특정 개인을 식별할 수 없는 형태로 가공하여 제공하는 경우<br>
+          <br>
+          4. 개인정보 수집항목 및 수집방법<br>
+          회사는 서비스 제공을 위하여 필요한 최소한의 범위 내에서 아래와 같이 개인정보를 수집하고 있습니다.<br>
+          <br>
+          가. 수집항목<br>
+          
+          · 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br>
+          <br>
+          · 통계작성, 학술연구나 시장조사를 위해 특정 개인을 식별할 수 없는 형태로 가공하여 제공하는 경우<br>
+          <br>
+          나. 개인정보 수집방법<br>
+          <br>
+          · 개인정보 수집방법 : 홈페이지(관심고객 등록)<br>
+          <br>
+          5. 개인정보의 처리 위탁<br>
+          회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 위탁계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.<br>
+          
+          <table class="table-1">
+            <thead>
+              <tr>
+                <th>수탁업체</th>
+                <th>위탁업무내용</th>
+                <th>개인정보의 보유 및 이용기간</th>
+              </tr>
+              <tr>
+                <th>하이브미디어</th>
+                <th>웹사이트 운영 및 시스템 관리</th>
+                <th>제공받은 목적 달성시 혹읜 위탁계약 종료시까지</th>
+              </tr>
+              <tr>
+                <th>㈜니소스씨앤디</th>
+                <th>분양대행 / 마케팅 :
+          분양정보 안내 및 분양 상담 등 문의 처리</th>
+                <th>제공받은 목적 달성시 혹은 위탁계약 종료시까지</th>
+              </tr>
+            </thead>
+          </table>
+          
+          
+          6. 개인정보의 파기절차 및 방법<br>
+          회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br>
+          <br>
+          가. 파기절차<br>
+          <br>
+          관심고객 등록을 위해 입력하신 정보는 목적이 달성된 후 기타 관련 법령에 의한 개인정보보관 사유에 해당하지 않는 한 지체없이 파기됩니다.<br>
+          나. 파기방법<br>
+          <br>
+          전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br>
+          <br>
+          7. 정보주체의 권리와 그 행사방법<br>
+          개인정보의 수집, 이용 및 제공에 있어서 고객은 언제든지 도의를 철회하실 수 있습니다. 고객의 개인정보에 대한 열람을 요구할 수 있고 오류가 있는 경우에는 그 정정을 요구하실 수 있습니다. 귀하의 개인정보에 대한 열람 또는 정정을 하고자 할 경우에는 개인정보관리책임자에게 서면, 전화 또는 E-mail로 연락하시면 확인이 되는 대로 지체 없이 조치하겠습니다. 귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체 없이 통지하여 정정이 이루어지도록 조치하겠습니다.수원 금호 리첸시아 퍼스티지 홈페이지는 개인정보와 관련하여 고객님의 의견과 불만을 제기할 수 있는 창구를 개설하고 있습니다. 개인정보와 관련한 불만이 있으신 고객은 수원 금호 리첸시아 퍼스티지 홈페이지의 개인정보관리 책임자(아래 참고)에게 의견을 주시면 접수 후 즉시 조치하여 처리결과를 통보하여 드립니다.<br>
+          <br>
+          8. 개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항<br>
+          본 사이트는 쿠키를 사용하지 않습니다<br>
+          <br>
+          9. 개인정보관련 기술적 관리적 물리적 대책<br>
+          수원 금호 리첸시아 퍼스티지 홈페이지는 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위한 기술적 대책을 시행하고 있습니다.<br>
+          <br>
+          가. 기술적 보호조치<br>
+          <br>
+          관심고객정보는 암호 알고리즘을 이용하여 네트워크 상의 개인정보를 안전하게 전송할 수 있는 보안장치(SSL)를 채택하고 있습니다. 백신 프로그램을 이용하여 바이러스에 의한 피해방지를 취하고 있습니다. 서버 및 네트워크용 방화벽 시스템을 갖추고 개인정보보호에 만전을 기하고 있습니다.<br>
+          <br>
+          나. 관리적 보호조치<br>
+          <br>
+          회사는 개인정보관리 책임자를 지정하고 이용자의 개인정보를 취급하는 자를 최소한으로 제한합니다. 수원 금호 리첸시아 퍼스티지 홈페이지는 고객께서 고객 정보 삭제를 요청한 경우 또는 사전에 고지한 개인정보의 수집목적이 달성된 때에는 개인정보를 지체 없이 파기합니다. 개인정보관리 책임자의 관련정보 무단사용을 방지하기 위하여 개인정보가 있는 컴퓨터를 제한운영하며 취급자의 비밀번호를 정기적으로 갱신하고 있습니다.<br>
+          <br>
+          10. 개인정보 보호책임자<br>
+          회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.<br>
+          <br>
+          
+          <table class="table-2">
+            <tbody><tr>
+              <th>개인정보관리책임자</th>
+              <td>김상헌 과장</td>
+            </tr>
+            <tr>
+              <th rowspan="3">고객서비스 담당부서</th>
+              <td>부서 : 관리부</td>
+            </tr>
+            <tr>
+              <td>전화번호 : 070-5184-2377</td>
+            </tr>
+            <tr>
+              <td>이메일 : infini4113@hanmail.net</td>
+            </tr>
+          </tbody></table>
+          
+          11. 권익침해 구제방법<br>
+          정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. 아래의 기관은 회사와는 별개의 기관으로서, 회사의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.<br>
+          <br>
+          · 개인정보침해신고센터 (http://privacy.kisa.or.kr / 국번없이 118)<br>
+          <br>
+          · 개인정보분쟁조정위원회 (http://kopico.go.kr / 1833-6972)<br>
+          <br>
+          · 대검찰청 사이버수사과 (http://spo.go.kr / 국번없이 1301)<br>
+          <br>
+          ·경찰청 사이버안전국 (http://cyberbureau.police.go.kr / 국번없이 182)<br>
+          <br>
+          12. 고지 의무<br>
+          현 개인정보 처리방침 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지를 통해 고지할 것입니다.<br>
+          <br>
+          · 공고일자: 2021년 11월 11일<br>
+          <br>
+          · 시행일자: 2021년 11월 12일<br>
+					</div>
+				</div>
+			</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer_area">
+      <div class="content_area">
+        <div class="cont_1">
+          <div class="logo">
+            <img src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
+          </div>
+          <div class="text_area">
+            <p>수원 금호 리첸시아 퍼스티지 | 홍보관 주소 : 수원시 권선구 고색동 533-6 | 문의&#41; 031-000-0000</p>
+            <p>COPYRIGHT © <span class="this-year"></span>. 수원 금호 리첸시아 퍼스티지. all rights reserved.</p>
+            <p class="pri_color">시행 <strong>인피니플러스(주), (주)휴이언</strong> 시공 <strong>금호건설(주)</strong> 신탁 <strong>한국자산신탁(주)</strong></p>
+            <div class="gray_area">
+              <p class="gray">- 유의사항: 개인정보 취급 및 위탁받는자(수탁업체)</p>
+              <p class="gray">- 분양 및 업무대행 : (주)니소스씨앤디, (주)유당디엔씨</p>
+              <p class="gray">- 마케팅 업무 KP디지털마케팅(주)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont_2">
+          <div class="logo">
+            <img src="https://수원금호리첸시아.com/image/logo_img.png" alt="logo" />
+          </div>
+          <div class="text_area">
+            <div class="gray_area">
+              <p class="gray">KP디지털마케팅(주) 대표이사 : 고승일, 양석민</p>
+              <p class="gray">대표전화 : 02-000-0000 | 팩스 : 02-000-0000 | 이메일 : example1234@gmail.com</p>
+              <p class="gray">서울특별시 강남구 언주로 771, 5층(논현동, 건설회사)</p>
+            </div>
+            <p class="white">관심고객 등록 및 관리는 분양마케팅사 (주)니소스씨앤디의 마케팅 플랫폼인 KPDM(주)에서 수집 및 주관합니다.</p>
+            <a class="personalInformationProcessing" href="../../src/term_p/personalInformationProcessing.html">| 개인정보처리방침 |</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
 
 
-6. 개인정보의 파기절차 및 방법<br>
-회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br>
-<br>
-가. 파기절차<br>
-<br>
-관심고객 등록을 위해 입력하신 정보는 목적이 달성된 후 기타 관련 법령에 의한 개인정보보관 사유에 해당하지 않는 한 지체없이 파기됩니다.<br>
-나. 파기방법<br>
-<br>
-전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br>
-<br>
-7. 정보주체의 권리와 그 행사방법<br>
-개인정보의 수집, 이용 및 제공에 있어서 고객은 언제든지 도의를 철회하실 수 있습니다. 고객의 개인정보에 대한 열람을 요구할 수 있고 오류가 있는 경우에는 그 정정을 요구하실 수 있습니다. 귀하의 개인정보에 대한 열람 또는 정정을 하고자 할 경우에는 개인정보관리책임자에게 서면, 전화 또는 E-mail로 연락하시면 확인이 되는 대로 지체 없이 조치하겠습니다. 귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체 없이 통지하여 정정이 이루어지도록 조치하겠습니다.수원 금호 리첸시아 퍼스티지 홈페이지는 개인정보와 관련하여 고객님의 의견과 불만을 제기할 수 있는 창구를 개설하고 있습니다. 개인정보와 관련한 불만이 있으신 고객은 수원 금호 리첸시아 퍼스티지 홈페이지의 개인정보관리 책임자(아래 참고)에게 의견을 주시면 접수 후 즉시 조치하여 처리결과를 통보하여 드립니다.<br>
-<br>
-8. 개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항<br>
-본 사이트는 쿠키를 사용하지 않습니다<br>
-<br>
-9. 개인정보관련 기술적 관리적 물리적 대책<br>
-수원 금호 리첸시아 퍼스티지 홈페이지는 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위한 기술적 대책을 시행하고 있습니다.<br>
-<br>
-가. 기술적 보호조치<br>
-<br>
-관심고객정보는 암호 알고리즘을 이용하여 네트워크 상의 개인정보를 안전하게 전송할 수 있는 보안장치(SSL)를 채택하고 있습니다. 백신 프로그램을 이용하여 바이러스에 의한 피해방지를 취하고 있습니다. 서버 및 네트워크용 방화벽 시스템을 갖추고 개인정보보호에 만전을 기하고 있습니다.<br>
-<br>
-나. 관리적 보호조치<br>
-<br>
-회사는 개인정보관리 책임자를 지정하고 이용자의 개인정보를 취급하는 자를 최소한으로 제한합니다. 수원 금호 리첸시아 퍼스티지 홈페이지는 고객께서 고객 정보 삭제를 요청한 경우 또는 사전에 고지한 개인정보의 수집목적이 달성된 때에는 개인정보를 지체 없이 파기합니다. 개인정보관리 책임자의 관련정보 무단사용을 방지하기 위하여 개인정보가 있는 컴퓨터를 제한운영하며 취급자의 비밀번호를 정기적으로 갱신하고 있습니다.<br>
-<br>
-10. 개인정보 보호책임자<br>
-회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.<br>
-<br>
 
-<table class="table-2">
-	<tbody><tr>
-		<th>개인정보관리책임자</th>
-		<td>김상헌 과장</td>
-	</tr>
-	<tr>
-		<th rowspan="3">고객서비스 담당부서</th>
-		<td>부서 : 관리부</td>
-	</tr>
-	<tr>
-		<td>전화번호 : 070-5184-2377</td>
-	</tr>
-	<tr>
-		<td>이메일 : infini4113@hanmail.net</td>
-	</tr>
-</tbody></table>
 
-11. 권익침해 구제방법<br>
-정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. 아래의 기관은 회사와는 별개의 기관으로서, 회사의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.<br>
-<br>
-· 개인정보침해신고센터 (http://privacy.kisa.or.kr / 국번없이 118)<br>
-<br>
-· 개인정보분쟁조정위원회 (http://kopico.go.kr / 1833-6972)<br>
-<br>
-· 대검찰청 사이버수사과 (http://spo.go.kr / 국번없이 1301)<br>
-<br>
-·경찰청 사이버안전국 (http://cyberbureau.police.go.kr / 국번없이 182)<br>
-<br>
-12. 고지 의무<br>
-현 개인정보 처리방침 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지를 통해 고지할 것입니다.<br>
-<br>
-· 공고일자: 2021년 11월 11일<br>
-<br>
-· 시행일자: 2021년 11월 12일<br>
-		</div>
-	</div>
-</div>
+
+
+

@@ -73,6 +73,39 @@ section {
   max-width: 1140px;
   margin: 0 auto;
   padding-bottom: 120px;
+  .container-sub {
+    .row {
+      color: #222;
+      .term-box {
+        border: none;
+        min-height: 60px;
+        display: block;
+        overflow: hidden;
+        font-size: 14px;
+        text-align: left;
+        line-height: 180%;
+        @media(max-width: 1175px) {
+          padding: 30px;
+        }
+        table {
+          width: 100%;
+          max-width: 100%;
+          margin: 20px 0;
+          th {
+            border: 1px solid #d5d5d5;
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+          }
+          td {
+            border: 1px solid #d5d5d5;
+            padding: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
   .youtube-video {
     width: 900px;
     height: 600px;

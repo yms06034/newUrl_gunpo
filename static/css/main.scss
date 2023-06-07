@@ -2,6 +2,13 @@ $primary: #002060;
 $primary2: #EEECE1;
 $primary3: #CFA578;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .view {display: block;}
 
 .active {
@@ -57,11 +64,18 @@ section {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        img {
+          width: 150px;
+        }
       }
       .center-text {
         position: absolute;
         left: 34vw;
         top: 8vh; 
+        width: 150px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
