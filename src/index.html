@@ -18,8 +18,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-
 
 </head>
 <body>
@@ -165,6 +163,7 @@
         <div class="main_banner_area_m">
           <div class="img_area">
             <img alt="Snow" class="img" src="../assets/main_mobile-long.png" alt="web_mainbanner">
+            <img class="title_992" src="../assets/main-tittle.png" alt="title" />
           </div>
         </div>
       </div>
@@ -183,16 +182,21 @@
         <div class="premium-content-area">
           <div class="premium-slide">
             <div class="img-items">
-              <img class="sliderimg" src="../assets/premium_img/m_s2_slider01_bg.png" alt="img" />
+              <img class="image active_2" src="../assets/premium_img/m_s2_slider01_bg.png" alt="Image 1" />
+              <img class="image" src="../assets/premium_img/m_s2_slider02_bg.png" alt="Image 2">
+              <img class="image" src="../assets/premium_img/m_s2_slider03_bg.png" alt="Image 3">
+              <img class="image" src="../assets/premium_img/m_s2_slider04_bg.png" alt="Image 4">
+
+
               <div class="btn-area">
                 <hr />
-                <button id="bbbtn01" class="bbbtn">입지</button>
+                <button onclick="changeImage(0)" class="bbbtn dlqwl">입지</button>
                 <hr />
-                <button id="bbbtn02" class="bbbtn">교통</button>
+                <button onclick="changeImage(1)" id="bbbtn02" class="bbbtn ryxhd">교통</button>
                 <hr />
-                <button id="bbbtn03" class="bbbtn">생활</button>
+                <button onclick="changeImage(2)" class="bbbtn todghkf">생활</button>
                 <hr />
-                <button id="bbbtn04" class="bbbtn">교육</button>
+                <button onclick="changeImage(3)" class="bbbtn rydbr">교육</button>
               </div>
               <a class="bbtn_premium" href="../src/businessGuide/premium.html">
                 VIEW MORE +
@@ -213,7 +217,10 @@
           <div class="right-bg">
             <img class="r-b-img" src="../assets/trd_tres_m.png" alt="s3_right_bg" />
             <div class="r-sub-bg">
-              <img class="r-s-img" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="m_s03_slider_item-01" />
+              <img class="r-s-img image_2 active" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="m_s03_slider_item-01" />
+            </div>
+            <div class="r-sub-bg">
+              <img class="r-s-img image_2" src="../assets/benefit_img/m_s03_slider_item-02.png" alt="m_s03_slider_item-02" />
             </div>
             <div class="view-btn_area">
             </div>
@@ -289,6 +296,58 @@
           prevEl: ".swiper-button-prev"
         },
       });
+
+      var images = document.getElementsByClassName('image');
+      var currentImageIndex = 0;
+      var interval;
+
+      function startImageSlider() {
+        interval = setInterval(changeImage, 3000); 
+      }
+
+      function stopImageSlider() {
+        clearInterval(interval);
+      }
+
+      function changeImage(index) {
+        images[currentImageIndex].style.display = 'none';
+
+        if (typeof index !== 'undefined') {
+          currentImageIndex = index;
+        } else {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        images[currentImageIndex].style.display = 'block';
+
+        stopImageSlider();
+        startImageSlider();
+      }
+      
+      window.onload = startImageSlider;
+
+      var images_2 = document.getElementsByClassName('image_2');
+      var currentImageIndex_2 = 0;
+      var interval_2;
+
+      function startImageSlider_2() {
+        interval_2 = setInterval(changeImage_2, 3000); 
+      }
+
+      function stopImageSlider_2() {
+        clearInterval(interval_2);
+      }
+
+      function changeImage_2() {
+        images_2[currentImageIndex_2].classList.remove('active');
+        
+        currentImageIndex_2 = (currentImageIndex_2 + 1) % images_2.length;
+        
+        images_2[currentImageIndex_2].classList.add('active');
+      }
+      
+      window.onload = startImageSlider_2;
+
     </script>
 
 

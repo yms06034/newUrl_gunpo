@@ -56,6 +56,9 @@ section {
   .top_title_area {
     text-align: center;
     .title {
+      @media(max-width:992px) {
+        padding: 0 20px;
+      }
       .sub_text {
         font-size: 22px;
         color: $primary;
@@ -74,8 +77,8 @@ section {
         text-align: center;
         margin-top: 40px;
         position: relative;
-        .sliderimg {
-
+        @media(max-width:992px) {
+          padding: 0 20px;
         }
         .btn-area {
           position: absolute;
@@ -83,10 +86,20 @@ section {
           display: flex;
           flex-direction: column;
           left: 130px;
+          @media(max-width:630px) {
+            left:90px;
+          }
+          @media(max-width:530px) {
+            display: none;
+          }
+          
           .bbbtn {
             font-size: 22px;
             color: $primary3;
             font-weight: 600;
+            @media(max-width:560px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -98,13 +111,30 @@ section {
       margin-top: 50px;
       font-weight: bold;
       position: absolute;
-      right: 255px;
-      top: 272px;
+      left: 50%;
+      transform: translate(-50%, 500%);
+      top: 0;
       &:hover {
         // font-weight: bold;
         background: #fff;
         opacity: .1;
         color: #222;
+      }
+      @media(max-width:630px) {
+        transform: translate(-50%, 400%);
+      }
+      @media(max-width:550px) {
+        transform: translate(-30%, 300%);
+      }
+      @media(max-width:470px) {
+        padding: 9px 18px;
+        margin-top: 30px;
+      }
+      @media(max-width:400px) {
+        margin-top: 12px;
+      }
+      @media(max-width:370px) {
+        margin-top: 0;
       }
     }
   }
@@ -194,12 +224,24 @@ section {
 
   .main_banner_area_m {
     display: none;
+    position: relative;
     @media(max-width: 992px) {
       display: block;
     }
     .img_area {
       .img {
         width: 100%;
+      }
+      .title_992 {
+        display: none;
+        @media(max-width:992px) {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          display: block;
+          transform: translate(-50%, 50px);
+          width: 50%;
+        }
       }
     }
   }
@@ -278,7 +320,7 @@ section {
       position: relative;
       
       .r-b-img {
-        height: 820px;
+        height: 950px;
         width: auto;
         @media(max-width: 1350px) {
           height: 680px;
@@ -467,3 +509,21 @@ section {
   }
 }
 
+.image {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.image.active_2{
+  display: block;
+}
+
+.image_2 {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.image_2.active {
+  opacity: 1; 
+}
