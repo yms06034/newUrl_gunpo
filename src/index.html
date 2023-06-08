@@ -206,13 +206,13 @@
 
               <div class="btn-area">
                 <hr />
-                <a onclick="javascript:changeImage(0)" class="bbbtn dlqwl">입지</a>
+                <button ontouchstart="buttonClick(0)" class="bbbtn dlqwl">입지</button>
                 <hr />
-                <a onclick="javascript:changeImage(1)" id="bbbtn02" class="bbbtn ryxhd">교통</a>
+                <button ontouchstart="buttonClick(1)" id="bbbtn02" class="bbbtn ryxhd">교통</button>
                 <hr />
-                <a onclick="javascript:changeImage(2)" class="bbbtn todghkf">생활</a>
+                <button ontouchstart="buttonClick(2)" class="bbbtn todghkf">생활</button>
                 <hr />
-                <a onclick="javascript:changeImage(3)" class="bbbtn rydbr">교육</a>
+                <button ontouchstart="buttonClick(3)" class="bbbtn rydbr">교육</button>
               </div>
               <a class="bbtn_premium" href="../src/businessGuide/premium.html">
                 VIEW MORE +
@@ -279,6 +279,7 @@
       // console.log(images1);
       var currentImageIndex1 = 0;
       var interval1;
+
 
       function startImageSlider1() {
       images1[currentImageIndex1].style.opacity = 1;
@@ -352,6 +353,5 @@
         startImageSlider1();
       };
     </script>
-
   </body>
 </html>
