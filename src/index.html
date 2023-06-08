@@ -313,23 +313,23 @@
         changeImage(index);
       }
 
-      function touchStart(event) {
-        touchStartX = event.changedTouches[0].clientX;
-        stopImageSlider();
-      }
+      // function touchStart(event) {
+      //   touchStartX = event.changedTouches[0].clientX;
+      //   stopImageSlider();
+      // }
 
-      function touchEnd(event) {
-        var touchEndX = event.changedTouches[0].clientX;
-        var touchDiff = touchEndX - touchStartX;
+      // function touchEnd(event) {
+      //   var touchEndX = event.changedTouches[0].clientX;
+      //   var touchDiff = touchEndX - touchStartX;
         
-        if (touchDiff > 50) {
-          changeImage(currentImageIndex - 1);
-        } else if (touchDiff < -50) {
-          changeImage(currentImageIndex + 1);
-        }
+      //   if (touchDiff > 50) {
+      //     changeImage(currentImageIndex - 1);
+      //   } else if (touchDiff < -50) {
+      //     changeImage(currentImageIndex + 1);
+      //   }
         
-        startImageSlider();
-      }
+      //   startImageSlider();
+      // }
 
       window.onload = function() {
         startImageSlider();
