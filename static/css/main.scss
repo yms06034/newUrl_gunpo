@@ -101,6 +101,7 @@ section {
             color: $primary3;
             font-weight: 600;
             cursor: pointer;
+            z-index: 9999;
             @media(max-width:560px) {
               font-size: 18px;
             }
