@@ -10,4 +10,3 @@ const img_location = document.querySelector('#img01');
 const img_traffic = document.querySelector('#img02');
 const img_life = document.querySelector('#img03');
 const img_education = document.querySelector('#img04');
-

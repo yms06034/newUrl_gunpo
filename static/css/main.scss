@@ -519,14 +519,11 @@ hr {
 }
 
 .image {
-  display: none;
+  position: initial;
   transition: opacity 0.5s ease-in-out;
   width: 100%;
 }
 
-.image.active_2{
-  display: block;
-}
 
 .image_2 {
   opacity: 0; 
