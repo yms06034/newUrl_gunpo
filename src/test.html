@@ -1,31 +1,117 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <style>
-    .image {
-      position: absolute; /* 이미지 위치 조정 */
-      opacity: 0; /* 이미지 투명도 설정 */
-      transition: opacity 0.5s ease-in-out; /* 이미지 전환 효과 설정 */
+    .image-container1, .image-container2 {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
     }
     
-    .image.active {
-      opacity: 1; /* 현재 이미지 표시 */
+    .image1, .image2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .image1.active, .image2.active {
+      opacity: 1;
+    }
+    
+    .button-container {
+      margin-top: 20px;
+    }
+    
+    .button-container button {
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
-  <img class="image active" src="../assets/premium_img/m_s2_slider01_bg.png" alt="Image 1" />
-  <img class="image" src="../assets/premium_img/m_s2_slider02_bg.png" alt="Image 2" />
-  <img class="image" src="../assets/premium_img/m_s2_slider03_bg.png" alt="Image 3" />
-  <img class="image" src="../assets/premium_img/m_s2_slider04_bg.png" alt="Image 4" />
+  <div class="image-container1">
+    <img class="image1 active" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="Image 1">
+    <img class="image1" src="../assets/benefit_img/m_s03_slider_item-02.png" alt="Image 2">
+  </div>
 
-  <div style="margin-bottom:30px;">
+  <div class="image-container2">
+    <img class="image2 active" src="../assets/premium_img/m_s2_slider01_bg.png" alt="Image 3">
+    <img class="image2" src="../assets/premium_img/m_s2_slider02_bg.png" alt="Image 4">
+    <img class="image2" src="../assets/premium_img/m_s2_slider03_bg.png" alt="Image 4">
+    <img class="image2" src="../assets/premium_img/m_s2_slider04_bg.png" alt="Image 4">
+  </div>
+
+  <div class="button-container">
     <button onclick="changeImage(0)">이미지 1</button>
     <button onclick="changeImage(1)">이미지 2</button>
     <button onclick="changeImage(2)">이미지 3</button>
     <button onclick="changeImage(3)">이미지 4</button>
   </div>
 
-  <script src="../static/js/main.js"></script>
+  <script>
+    var images1 = document.querySelectorAll('.image1');
+    var currentImageIndex1 = 0;
+    var interval1;
+
+    var images2 = document.querySelectorAll('.image2');
+    var currentImageIndex2 = 0;
+    var interval2;
+
+    function startImageSlider1() {
+      images1[currentImageIndex1].style.opacity = 1;
+      interval1 = setInterval(changeImage1, 3000);
+    }
+
+    function stopImageSlider1() {
+      clearInterval(interval1);
+    }
+
+    function changeImage1() {
+      var currentImage = images1[currentImageIndex1];
+      var nextImageIndex = (currentImageIndex1 + 1) % images1.length;
+      var nextImage = images1[nextImageIndex];
+
+      currentImage.style.opacity = 0;
+      nextImage.style.opacity = 1;
+
+      currentImageIndex1 = nextImageIndex;
+    }
+
+    function startImageSlider2() {
+      images2[currentImageIndex2].style.opacity = 1;
+      interval2 = setInterval(changeImage2, 3000);
+    }
+
+    function stopImageSlider2() {
+      clearInterval(interval2);
+    }
+
+    function changeImage2(index) {
+      var currentImage = images2[currentImageIndex2];
+      var nextImageIndex;
+
+      if (typeof index !== 'undefined') {
+        nextImageIndex = index;
+      } else {
+        nextImageIndex = (currentImageIndex2 + 1) % images2.length;
+      }
+
+      var nextImage = images2[nextImageIndex];
+
+      currentImage.style.opacity = 0;
+      nextImage.style.opacity = 1;
+
+      currentImageIndex2 = nextImageIndex;
+    }
+
+    window.onload = function() {
+      startImageSlider1();
+      startImageSlider2();
+    };
+  </script>
 </body>
-</html>
+</html> -->

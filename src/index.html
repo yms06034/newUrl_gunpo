@@ -148,13 +148,13 @@
       <div class="first_sec">
         <div class="main_banner_area">
           <div class="img_area">
-            <img alt="Snow" class="img" src="../assets/1920-600.png" alt="web_mainbanner">
+            <img alt="Snow" class="img" src="../assets/main_banner/메인_img.png" alt="web_mainbanner">
             <div class="bg-right-content">
-              <img src="../assets/main-banner-right.png" alt="right-bg">
-              <img class="bg--r-main-title" src="../assets/main-tittle.png" alt="main-tittle" />
+              <img src="../assets/main_banner/메인_slide.png" alt="right-bg">
+              <!-- <img class="bg--r-main-title" src="../assets/main_banner/메인_slide.png" alt="main-slide" /> -->
             </div>
             <div class=center-text>
-              <img src="../assets/sub-banner.png" alt="img" />
+              <img src="../assets/main_banner/main_img2_com.png" alt="sub_img" />
             </div>
           </div>
         </div>
@@ -217,10 +217,10 @@
           <div class="right-bg">
             <img class="r-b-img" src="../assets/trd_tres_m.png" alt="s3_right_bg" />
             <div class="r-sub-bg">
-              <img class="r-s-img image_2 active" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="m_s03_slider_item-01" />
+              <img class="r-s-img image1 active" src="../assets/benefit_img/m_s03_slider_item-01.png" alt="m_s03_slider_item-01" />
             </div>
             <div class="r-sub-bg">
-              <img class="r-s-img image_2" src="../assets/benefit_img/m_s03_slider_item-02.png" alt="m_s03_slider_item-02" />
+              <img class="r-s-img image1" src="../assets/benefit_img/m_s03_slider_item-02.png" alt="m_s03_slider_item-02" />
             </div>
             <div class="view-btn_area">
             </div>
@@ -253,87 +253,36 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false
-        },
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-      });
-
-      var images = document.getElementsByClassName('image');
-      var currentImageIndex = 0;
-      var interval;
-
-      function startImageSlider() {
-        interval = setInterval(changeImage, 3000); 
-      }
-
-      function stopImageSlider() {
-        clearInterval(interval);
-      }
-
-      function changeImage(index) {
-        images[currentImageIndex].style.display = 'none';
-
-        if (typeof index !== 'undefined') {
-          currentImageIndex = index;
-        } else {
-          currentImageIndex = (currentImageIndex + 1) % images.length;
-        }
-
-        images[currentImageIndex].style.display = 'block';
-
-        stopImageSlider();
-        startImageSlider();
-      }
-      
-      window.onload = startImageSlider;
-
-      var images_2 = document.getElementsByClassName('image_2');
-      var currentImageIndex_2 = 0;
-      var interval_2;
-
-      function startImageSlider_2() {
-        interval_2 = setInterval(changeImage_2, 3000); 
-      }
-
-      function stopImageSlider_2() {
-        clearInterval(interval_2);
-      }
-
-      function changeImage_2() {
-        images_2[currentImageIndex_2].classList.remove('active');
-        
-        currentImageIndex_2 = (currentImageIndex_2 + 1) % images_2.length;
-        
-        images_2[currentImageIndex_2].classList.add('active');
-      }
-      
-      window.onload = startImageSlider_2;
-
-    </script>
-
-    <script>
-
       var images = document.getElementsByClassName('image');
       var currentImageIndex = 0;
       var interval;
       var touchStartX;
+
+      var images1 = document.querySelectorAll('.image1');
+      // console.log(images1);
+      var currentImageIndex1 = 0;
+      var interval1;
+
+      function startImageSlider1() {
+      images1[currentImageIndex1].style.opacity = 1;
+      interval1 = setInterval(changeImage1, 3000);
+      }
+
+      function stopImageSlider1() {
+        clearInterval(interval1);
+      }
+
+      function changeImage1() {
+        var currentImage = images1[currentImageIndex1];
+        var nextImageIndex = (currentImageIndex1 + 1) % images1.length;
+        var nextImage = images1[nextImageIndex];
+
+        currentImage.style.opacity = 0;
+        nextImage.style.opacity = 1;
+
+        currentImageIndex1 = nextImageIndex;
+      }
 
       function startImageSlider() {
         images[currentImageIndex].style.opacity = 1; 
@@ -382,10 +331,11 @@
         startImageSlider();
       }
 
-      window.onload = startImageSlider;
-
+      window.onload = function() {
+        startImageSlider();
+        startImageSlider1();
+      };
     </script>
-
 
   </body>
 </html>
