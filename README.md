@@ -15,23 +15,22 @@ npm i -D parcel-bundler \
       - IctnEnvrn.html : 입지 환경
       - premium.html : 프리미엄
       - location.html : 오시는 길
-
+<br />
     - infrmCmplx : 단지안내
       - layoutComplex.html : 단지 배치도
       - eLakTbl.html : 동호수표 (사용 X , 사용할 자료가 없음)
       - community.html : 커뮤니티센터 (사용 X , 사용할 자료가 없음)
-
+<br />
     - householdInformation : 세대 안내
       - 84.html : 84 안내 페이지
       - 59.html : 59 안내 페이지
-
+<br />
     - informationCenters : 홍보센터 
       - mediaCoverage.html : 언론보도
       - promotionalVideo.html : 홍보영상
-
-
+<br />
     - term_p : 개인정보처리 방침 페이지 (사용 X, 사용 시 정보 수정해야함)
-
+<br />
   - static : css, js가 들어있는 file
     - css
       - h_f.scss : header style css
@@ -40,5 +39,5 @@ npm i -D parcel-bundler \
       - style.scss : main 제외한 나머지 페이지 style css
     - js
       - main.js : mainjs인데 (보통은 그냥 html에 작성함)  
-      
+<br />
   - assets : image file
