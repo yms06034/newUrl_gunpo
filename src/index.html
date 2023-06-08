@@ -206,13 +206,13 @@
 
               <div class="btn-area">
                 <hr />
-                <button onclick="changeImage(0)" ontouchstart="buttonClick(0)" class="bbbtn dlqwl">입지</button>
+                <button onclick="changeImage(0)" ontouchstart="buttonClick(0)" ontouchend="startImageSlider()" class="bbbtn dlqwl">입지</button>
                 <hr />
-                <button onclick="changeImage(1)" ontouchstart="buttonClick(1)" id="bbbtn02" class="bbbtn ryxhd">교통</button>
+                <button onclick="changeImage(1)" ontouchstart="buttonClick(1)" ontouchend="startImageSlider()" id="bbbtn02" class="bbbtn ryxhd">교통</button>
                 <hr />
-                <button onclick="changeImage(2)" ontouchstart="buttonClick(2)" class="bbbtn todghkf">생활</button>
+                <button onclick="changeImage(2)" ontouchstart="buttonClick(2)" ontouchend="startImageSlider()" class="bbbtn todghkf">생활</button>
                 <hr />
-                <button onclick="changeImage(3)" ontouchstart="buttonClick(3)" class="bbbtn rydbr">교육</button>
+                <button onclick="changeImage(3)" ontouchstart="buttonClick(3)" ontouchend="startImageSlider()" class="bbbtn rydbr">교육</button>
               </div>
               <a class="bbtn_premium" href="../src/businessGuide/premium.html">
                 VIEW MORE +
@@ -341,7 +341,9 @@
         
         if (touchDiff > 50) {
           changeImage(currentImageIndex - 1);
+
         } else if (touchDiff < -50) {
+
           changeImage(currentImageIndex + 1);
         }
         
