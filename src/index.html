@@ -309,6 +309,7 @@
       function startImageSlider() {
         images[currentImageIndex].style.opacity = 1; 
         images[currentImageIndex].style.display = "block"; 
+        images[currentImageIndex].style.transition = "opacity 0.3s;";
         interval = setInterval(changeImage, 3000); 
       }
 
@@ -319,6 +320,8 @@
       function changeImage(index) {
         images[currentImageIndex].style.opacity = 0;
         images[currentImageIndex].style.display = "none";
+        images[currentImageIndex].style.transition = "";
+
 
         if (typeof index !== 'undefined') {
           currentImageIndex = index;
@@ -328,6 +331,7 @@
         
         images[currentImageIndex].style.opacity = 1;
         images[currentImageIndex].style.display = "block";
+        images[currentImageIndex].style.transition = "opacity 0.3s;";
       }
 
       function buttonClick(index) {
@@ -394,9 +398,9 @@
         var imageContainer = document.querySelector(".r-b-img");
         var imageContent = document.querySelector(".animated-r-s-img");
         var position = imageContainer.getBoundingClientRect().top;
-        console.log("position", position);
+        
         var windowHeight = window.innerHeight;
-        console.log("windowHeight", windowHeight);
+        
 
         if (position < windowHeight * 0.8) {
           setTimeout(function() {
