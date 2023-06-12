@@ -364,14 +364,14 @@ hr {
     }
     .right-bg {
       position: relative;
-      
+      overflow: hidden;
       .r-b-img {
         height: 830px;
         width: auto;
         opacity: 0;
         transition: opacity 1s;
-        transform: translateX(30%);
-        transition: opacity 1s, transform 2s;
+        transform: translateX(50%);
+        transition: opacity 1s, transform 1s;
         @media(max-width: 1350px) {
           height: 680px;
         }
