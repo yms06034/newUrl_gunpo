@@ -394,18 +394,20 @@
         var imageContainer = document.querySelector(".r-b-img");
         var imageContent = document.querySelector(".animated-r-s-img");
         var position = imageContainer.getBoundingClientRect().top;
+        console.log("position", position);
         var windowHeight = window.innerHeight;
+        console.log("windowHeight", windowHeight);
 
-        if (position < windowHeight * 0.3) {
+        if (position < windowHeight * 0.8) {
           setTimeout(function() {
             imageContainer.classList.add("fade-in");
-          }, 500);
+          }, 1000);
         }
         
-        if (position < windowHeight * 0.3) {
+        if (position < windowHeight * 0.8) {
           setTimeout(function() {
             imageContent.classList.add("true-fade_in");
-          }, 1000);
+          }, 1600);
         }
       });
       
