@@ -231,5 +231,21 @@
     </div>
   </footer>
 
+  <script>
+
+    window.addEventListener("load", () => {
+          var imageContainer = document.querySelector(".people_img");
+          imageContainer.classList.add("animate");
+        });
+
+    window.addEventListener("load", () => {
+      var imageContainer = document.querySelector(".text_img");
+      setTimeout(() => {
+        imageContainer.classList.add("animate_scale")
+      }, 1000)
+    });
+
+  </script>
+
 </body>
 </html>
