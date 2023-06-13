@@ -359,7 +359,14 @@
       var moverlayImages = document.querySelectorAll(".m-overlay-image");
 
       var mcurrentImageIndex = 0;
-      var moverlayDelay = 1000; // 1초
+      var moverlayDelay = 1000;
+
+      function initializeBanner() {
+          mbannerImages[mcurrentImageIndex].classList.add("m-active-banner");
+          setTimeout(function() {
+            moverlayImages[mcurrentImageIndex].classList.add("m-fade-in-overlay");
+          }, moverlayDelay);
+        };
 
       function changeBannerImage() {
         var previousImageIndex = mcurrentImageIndex;
@@ -376,12 +383,13 @@
         }, 100);
       }
 
-      setInterval(changeBannerImage, 5000); 
+      window.addEventListener("load", function() {
+        initializeBanner();
+        setInterval(changeBannerImage, 5000);
+      });
 
-      mbannerImages[mcurrentImageIndex].classList.add("m-active-banner");
-      setTimeout(function() {
-        moverlayImages[mcurrentImageIndex].classList.add("m-fade-in-overlay");
-      }, moverlayDelay);
+
+
 
 
 
