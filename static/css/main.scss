@@ -4,7 +4,7 @@ $primary3: #CFA578;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
-@import '../../node_modules/animate.css/';
+
 
 .display-none {
   display: none;
@@ -54,12 +54,11 @@ section {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  opacity: 0;
-  transition: opacity 1s;
-  transform: scale(0.8);
-  transition: opacity 1s, transform 1s;
   .top_title_area {
     text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s, transform 1.3s;
     .title {
       @media(max-width:992px) {
         padding: 0 20px;
@@ -76,7 +75,15 @@ section {
       }
     }
   }
+  .fade-in {
+    opacity: 1;
+    transform: scale(1);
+  }
   .premium-content-area {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(7%);
+    transition: opacity 1s, transform 1.5s;
     .premium-slide {
       .img-items {
         text-align: center;
@@ -147,6 +154,10 @@ section {
       }
     }
   }
+  .ffade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .content_area {
     display: flex;
     flex-direction: column;
@@ -172,10 +183,6 @@ section {
       }
     }
   }
-}
-.fade-in {
-  opacity: 1;
-  transform: scale(1);
 }
 
 hr {
@@ -387,10 +394,15 @@ hr {
       .r-sub-bg {
         position: absolute;
         top: 210px;
-        right: 213px;
+        right: 40px;
         @media(max-width:1350px) {
           top: 159px;
           right: 80px;
+        }
+        @media(max-width:1230px) {
+          top: 159px;
+          right: 0px;
+          margin-left: 70px;
         }
         @media(max-width: 992px) {
           right: 130px;
@@ -405,7 +417,8 @@ hr {
         @media(max-width:650px) {
           top: 80px;
           right: 0px;
-          left: 110px;
+          left: 80px;
+          margin-left: 0;
         }
         @media(max-width:550px) {
           top: 55px;
@@ -419,6 +432,7 @@ hr {
         }
         @media(max-width:400px) {
           right: 0px;
+          left: 60px;
         }
         .r-s-img {
           width: 90%;

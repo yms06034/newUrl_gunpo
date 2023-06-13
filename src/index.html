@@ -44,6 +44,7 @@
   <!-- Header -->
   <header>
     <!-- <a href="../src/test.html">test</a> -->
+    <a href="../src/test.html">test</a>
     <div class="container d-flex align-items-center justify-content-sm-between py-3">
       <a href="../src/index.html" class="logo">
         <img class="logo_img" src="../assets/logo.png" alt="logo" />
@@ -178,7 +179,7 @@
           </div>
         </div>
 
-        <!-- MOBILD -->
+        <!-- MOBILD Banner -->
         <div class="main_banner_area_m">
           <div class="img_area">
             <img alt="Snow" class="img" src="../assets/main_mobile-long.png" alt="web_mainbanner">
@@ -375,12 +376,22 @@
       });
 
       window.addEventListener("scroll", function() {
-        var imageContainer = document.querySelector(".top_content");
+        var imageContainer = document.querySelector(".top_title_area");
         var position = imageContainer.getBoundingClientRect().top;
         var windowHeight = window.innerHeight;
 
         if (position < windowHeight * 0.5) {
           imageContainer.classList.add("fade-in");
+        }
+      });
+
+      window.addEventListener("scroll", function() {
+        var imageContainer = document.querySelector(".premium-content-area");
+        var position = imageContainer.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (position < windowHeight * 0.8) {
+          imageContainer.classList.add("ffade-in");
         }
       });
 
