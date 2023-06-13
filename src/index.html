@@ -165,26 +165,73 @@
     <!-- Main banner -->
     <section>
       <div class="first_sec">
-        <div class="main_banner_area">
+        <!-- <div class="main_banner_area">
           <div class="img_area">
             <img alt="Snow" class="img" src="../assets/main_banner/메인_img.png" alt="web_mainbanner">
             <div class="bg-right-content">
               <img class="right-animate-img" src="../assets/main_banner/메인_slide.png" alt="right-bg">
-              <!-- <img class="bg--r-main-title" src="../assets/main_banner/메인_slide.png" alt="main-slide" /> -->
+              <img class="bg--r-main-title" src="../assets/main_banner/메인_slide.png" alt="main-slide" />
             </div>
             <div class="center-text">
               <img class="animate-img" src="../assets/main_banner/main_img2_com.png" alt="sub_img" />
             </div>
           </div>
+        </div> -->
+
+        <div class="banner">
+          <div class="banner-image">
+            <img src="../assets/slider_banner/mainimg.png" alt="Banner Image 2">
+            <div class="overlay-image">
+              <img src="../assets/slider_banner/main_txtimg.png" alt="Overlay Image 1">
+            </div>
+          </div>
+          <div class="banner-image">
+            <img src="../assets//slider_banner/mainimg2.png" alt="Banner Image 1">
+            <div class="overlay-image">
+              <img src="../assets/slider_banner/main_txtimg.png" alt="Overlay Image 2">
+            </div>
+          </div>
+          <img src="../assets/slider_banner/main_right_bg.png" class="flex" alt="Overlay Image 2">
+          <img src="../assets/slider_banner/main_slider_txt.png" class="flex right_text" alt="Overlay Image Text2">
         </div>
+        
+        
 
         <!-- MOBILD Banner -->
-        <div class="main_banner_area_m">
+        <!-- <div class="main_banner_area_m">
           <div class="img_area">
             <img alt="Snow" class="img" src="../assets/main_mobile-long.png" alt="web_mainbanner">
-            <!-- <img class="title_992" src="../assets/main-tittle.png" alt="title" /> -->
+            <img class="title_992" src="../assets/main-tittle.png" alt="title" />
+          </div>
+        </div> -->
+        <!-- MOBILD Banner + anima effect -->
+        <div class="mobile_banner">
+          <div class="m-banner-image">
+            <img class="m-m-b_img" src="../assets/m_main_banner/mobile_bg.png" alt="Banner Image 1" />
+            <div class="m-overlay-image">
+              <div class="m-o-m1">
+                <img src="../assets/m_main_banner/mobile_img_left.png" alt="Overlay Image 1" />
+              </div>
+              <div class="m-o-m2">
+                <img src="../assets/m_main_banner/mobile_tilte.png" alt="Overlay Image 2" />
+              </div>
+            </div>
+          </div>
+          <div class="m-banner-image">
+            <img class="m-m-b_img" src="../assets/m_main_banner/mobile2_bg.png" alt="Banner Image 2" />
+            <div class="m-overlay-image">
+              <div class="m-o-m1">
+                <img src="../assets/m_main_banner/mobile_img_left.png" alt="Overlay Image 1" />
+              </div>
+              <div class="m-o-m2">
+                <img src="../assets/m_main_banner/mobile_tilte.png" alt="Overlay Image 2" />
+              </div>
+            </div>
           </div>
         </div>
+        
+        
+
       </div>
     </section>
 
@@ -275,6 +322,72 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var bannerImages = document.querySelectorAll(".banner-image");
+        var overlayImages = document.querySelectorAll(".overlay-image");
+
+        var currentImageIndex = 0;
+        var overlayDelay = 1000; 
+
+        function changeBannerImage() {
+          var previousImageIndex = currentImageIndex;
+          currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+
+          bannerImages[previousImageIndex].classList.remove("active_banner");
+          overlayImages[previousImageIndex].classList.remove("fade-in_banner");
+
+          setTimeout(function() {
+            bannerImages[currentImageIndex].classList.add("active_banner");
+            setTimeout(function() {
+              overlayImages[currentImageIndex].classList.add("fade-in_banner");
+            }, overlayDelay);
+          }, 100);
+        }
+
+        setInterval(changeBannerImage, 4000); 
+
+        bannerImages[currentImageIndex].classList.add("active_banner");
+        setTimeout(function() {
+          overlayImages[currentImageIndex].classList.add("fade-in_banner");
+        }, overlayDelay);
+      });
+
+
+      // Mobile - Main - Banner
+      var mbannerImages = document.querySelectorAll(".m-banner-image");
+      var moverlayImages = document.querySelectorAll(".m-overlay-image");
+
+      var mcurrentImageIndex = 0;
+      var moverlayDelay = 1000; // 1초
+
+      function changeBannerImage() {
+        var previousImageIndex = mcurrentImageIndex;
+        mcurrentImageIndex = (mcurrentImageIndex + 1) % mbannerImages.length;
+
+        mbannerImages[previousImageIndex].classList.remove("m-active-banner");
+        moverlayImages[previousImageIndex].classList.remove("m-fade-in-overlay");
+
+        setTimeout(function() {
+          mbannerImages[mcurrentImageIndex].classList.add("m-active-banner");
+          setTimeout(function() {
+            moverlayImages[mcurrentImageIndex].classList.add("m-fade-in-overlay");
+          }, moverlayDelay);
+        }, 100);
+      }
+
+      setInterval(changeBannerImage, 5000000000); 
+
+      mbannerImages[mcurrentImageIndex].classList.add("m-active-banner");
+      setTimeout(function() {
+        moverlayImages[mcurrentImageIndex].classList.add("m-fade-in-overlay");
+      }, moverlayDelay);
+
+
+
+
+
+
       var images = document.getElementsByClassName('image');
       var currentImageIndex = 0;
       var interval;
@@ -364,15 +477,20 @@
         startImageSlider1();
       };
 
-      window.addEventListener("load", function() {
-        var imageContainer = document.querySelector(".animate-img");
-        imageContainer.classList.add("animate");
-      });
+      // window.addEventListener("load", function() {
+      //   var imageContainer = document.querySelector(".animate-img");
+      //   imageContainer.classList.add("animate");
+      // });
 
       window.addEventListener("load", function() {
-        var imageContainer = document.querySelector(".right-animate-img");
-        imageContainer.classList.add("animate");
+        var imageContainer = document.querySelector(".right_text");
+        imageContainer.classList.add("r-t-animate");
       });
+
+      // window.addEventListener("load", function() {
+      //   var imageContainer = document.querySelector(".right-animate-img");
+      //   imageContainer.classList.add("animate");
+      // });
 
       window.addEventListener("scroll", function() {
         var imageContainer = document.querySelector(".top_title_area");
@@ -424,6 +542,7 @@
           }, 1600);
         }
       });
+
       
     </script>
   </body>
