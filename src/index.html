@@ -117,6 +117,11 @@
         <img class="tel_i_img" src="../assets/tel_icon.png" alt="tel_icon" />
         <p class="telnum"><span class="sub_tel">1668-3047</span></p>
       </a>
+      <button id="message_btn" class="tel_i_area">
+        <img class="tel_i_img" src="../assets/message_icon.png" alt="img" />
+      </button>
+
+      </btn>
 
       <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <img class="menu_icon" src="../assets/icon/icon_menu_.png" alt="Menu Icon" />
@@ -233,7 +238,7 @@
         </div> -->
         <!-- MOBILD Banner + anima effect -->
         <div class="mobile_banner">
-          <div class="m-banner-image">
+          <div id="mBannerImg1" class="m-banner-image">
             <img class="m-m-b_img" src="../assets/m_main_banner/mobile_bg.png" alt="Banner Image 1" />
             <div class="m-overlay-image">
               <div class="m-o-m1">
@@ -244,7 +249,7 @@
               </div>
             </div>
           </div>
-          <div class="m-banner-image">
+          <div id="mBannerImg2" class="m-banner-image">
             <img class="m-m-b_img" src="../assets/m_main_banner/mobile2_bg.png" alt="Banner Image 2" />
             <div class="m-overlay-image">
               <div class="m-o-m1">
@@ -581,6 +586,9 @@
 
       var textBtn1 = document.querySelector('#textBtn1')
       var textBtn2 = document.querySelector('#textBtn2')
+      var messageBtn1 = document.querySelector('#message_btn')
+      var mImgBtn1 = document.querySelector('#mBannerImg1')
+      var mImgBtn2 = document.querySelector('#mBannerImg2')
 
       function checkM(m) {
         location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.")
@@ -594,12 +602,17 @@
         checkM(checkMobile());
       })
 
-      var textBtn1 = document.querySelector('#textBtn1');
-      var textBtn2 = document.querySelector('#textBtn2');
+      messageBtn1.addEventListener('click', () => {
+        checkM(checkMobile());
+      })
 
-      function checkM(m) {
-        location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.");
-      }
+      mBannerImg1.addEventListener('click', () => {
+        checkM(checkMobile());
+      })
+
+      mBannerImg2.addEventListener('click', () => {
+        checkM(checkMobile());
+      })
 
       function checkMobile() {
         var vUA = navigator.userAgent.toLowerCase();
