@@ -66,10 +66,15 @@
           </ul>
         </li>
       </ul>
-      <a class="tel_i_area" href="tel:010-0000-0000">
+      <a class="tel_i_area" href="tel:1668-3047">
         <img class="tel_i_img" src="../../assets/tel_icon.png" alt="tel_icon" />
-        <p class="telnum">031&#41;<span class="sub_tel">000-0000</span></p>
+        <p class="telnum"><span class="sub_tel">1668-3047</span></p>
       </a>
+      <button id="message_btn" class="tel_i_area">
+        <img class="tel_i_img" src="../../assets/message_icon.png" alt="img" />
+      </button>
+
+      
       <button class="btn ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <img class="menu_icon" src="../../assets/icon/icon_menu_.png" alt="Menu Icon" />
       </button>
@@ -187,7 +192,7 @@
             <img src="../../assets/logo.png" alt="logo" />
           </div>
           <div class="text_area">
-            <p>군포역 트윈비스타 | 홍보관 주소 : 경기도 안양시 동안구 시민대로 115 | 문의&#41; 0000-0000</p>
+            <p>군포역 트윈비스타 | 홍보관 주소 : 경기도 안양시 동안구 시민대로 115 | 문의&#41; 1668-3047</p>
             <p>COPYRIGHT © <span class="this-year"></span>. 군포역 트윈비스타 all rights reserved.</p>
             <!-- <a class="personalInformationProcessing" href="../../src/term_p/personalInformationProcessing.html">| 개인정보처리방침 |</a> -->
           </div>
@@ -209,6 +214,28 @@
         imageContainer.classList.add("animate_scale")
       }, 500)
     });
+
+    var messageBtn1 = document.querySelector('#message_btn')
+
+    function checkM(m) {
+        location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.")
+      };
+
+    function checkMobile() {
+      var vUA = navigator.userAgent.toLowerCase();
+      
+      if ( vUA.indexOf("android") > -1 ) {
+        return "android";
+      } else if ( vUA.indexOf("iphone") > -1 || vUA.indexOf("ipad") > -1 || vUA.indexOf("ipod") > -1 ) {
+        return "ios";
+      } else {
+        return "other";
+      }
+    }
+
+    messageBtn1.addEventListener('click', () => {
+        checkM(checkMobile());
+      })
 
   </script>
 

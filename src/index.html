@@ -121,8 +121,6 @@
         <img class="tel_i_img" src="../assets/message_icon.png" alt="img" />
       </button>
 
-      </btn>
-
       <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <img class="menu_icon" src="../assets/icon/icon_menu_.png" alt="Menu Icon" />
       </button>
@@ -586,10 +584,10 @@
 
       var textBtn1 = document.querySelector('#textBtn1')
       var textBtn2 = document.querySelector('#textBtn2')
-      var messageBtn1 = document.querySelector('#message_btn')
       var mImgBtn1 = document.querySelector('#mBannerImg1')
       var mImgBtn2 = document.querySelector('#mBannerImg2')
-
+      
+      var messageBtn1 = document.querySelector('#message_btn')
       function checkM(m) {
         location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.")
       };
