@@ -10,6 +10,47 @@ $primary3: #CFA578;
   display: none;
 }
 
+// POPUP
+.popup {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #fff;
+  width: 330px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  .popup_img {
+    width: 100%;
+    height: auto;
+  }
+  .popup-btn-area {
+    display: flex;
+    .btn {
+      padding: 10px 15px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      width: 50%;
+      border-radius: 0;
+      font-size: 14px;
+      &:last-child {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+}
+
+#popup1[data-popup-state="hidden"] {
+  display: none;
+}
+
+#popup2[data-popup-state="hidden"] {
+  display: none;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -324,6 +365,8 @@ hr {
       }
     }
   }
+
+  
 
   // Mobile Main Banner
   .mobile_banner {
