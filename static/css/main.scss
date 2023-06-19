@@ -29,17 +29,22 @@ $primary3: #CFA578;
   .popup-btn-area {
     display: flex;
     .btn {
-      padding: 13px 15px;
+      padding: 20px 15px;
+      font-size: 18px;
       background-color: #222;
       color: #fff;
       cursor: pointer;
-      width: 50%;
       border-radius: 0;
-      font-size: 16px;
       &:last-child {
         border-left: 1px solid #fff;
       }
     }
+    .width {
+      width: 70%;
+    }
+    .width2 {
+      width: 30%;
+    } 
   }
 }
 
