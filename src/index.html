@@ -582,19 +582,36 @@
       var textBtn1 = document.querySelector('#textBtn1')
       var textBtn2 = document.querySelector('#textBtn2')
 
+      function checkM(m) {
+        location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.")
+      };
+
       textBtn1.addEventListener('click', () => {
         checkM(checkMobile());
-      });
+      })
 
       textBtn2.addEventListener('click', () => {
         checkM(checkMobile());
-      });
+      })
+
+      var textBtn1 = document.querySelector('#textBtn1');
+      var textBtn2 = document.querySelector('#textBtn2');
 
       function checkM(m) {
-        location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.")
+        location.href = 'sms:' + '01084597787' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("군포 트윈비스타 분양 정보 문의합니다.");
       }
 
-      
+      function checkMobile() {
+        var vUA = navigator.userAgent.toLowerCase();
+        
+        if ( vUA.indexOf("android") > -1 ) {
+          return "android";
+        } else if ( vUA.indexOf("iphone") > -1 || vUA.indexOf("ipad") > -1 || vUA.indexOf("ipod") > -1 ) {
+          return "ios";
+        } else {
+          return "other";
+        }
+      }
     </script>
   </body>
 </html>
